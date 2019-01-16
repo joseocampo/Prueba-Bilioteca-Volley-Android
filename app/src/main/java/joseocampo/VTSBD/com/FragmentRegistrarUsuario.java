@@ -137,7 +137,7 @@ public class FragmentRegistrarUsuario extends Fragment
     @Override
     public void onErrorResponse(VolleyError error) {
         barraProgreso.hide();
-        Toast.makeText(getContext(), "Error al registrar "+error.toString(), Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(), "Error al registrar "+error.toString(), Toast.LENGTH_LONG).show();
         Log.i("Error",error.toString());
     }
 
