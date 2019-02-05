@@ -1,10 +1,15 @@
 package joseocampo.VTSBD.com;
 
+import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +56,7 @@ public class FragmentConsultarUsuario extends Fragment
     private TextView campoID, vistaNombre, vistaProfesion;
     private ProgressDialog barraProgreso;
 
+
     //estos objetos request nos permiten establecer la conexion con el servidor de bd.
     private RequestQueue request;
     private JsonObjectRequest jsonObjectRequest;
@@ -91,12 +97,17 @@ public class FragmentConsultarUsuario extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         // Inflate the layout for this fragment
         View vista = inflater.inflate(R.layout.fragment_fragment_consultar_usuarios, container, false);
         campoID = (EditText) vista.findViewById(R.id.campoID);
         vistaNombre = (TextView) vista.findViewById(R.id.vistaNombre);
         vistaProfesion = (TextView) vista.findViewById(R.id.vistaProfesion);
         btnConsultar = (Button) vista.findViewById(R.id.btnRegistrar);
+
+
+
+
 
         request = Volley.newRequestQueue(getContext());
         btnConsultar.setOnClickListener(new View.OnClickListener() {
@@ -106,6 +117,9 @@ public class FragmentConsultarUsuario extends Fragment
             }
         });
 
+
+
+
         return  vista;
     }
     private void cargarWebService() {
@@ -113,7 +127,7 @@ public class FragmentConsultarUsuario extends Fragment
         barraProgreso.setMessage("consultando...");
         barraProgreso.show();
 
-        String url = "http://192.168.56.1/ejemploAndroid/wsJSONConsultarUsuario.php?" +
+        String url = "http://192.168.0.10/ejemploAndroid/wsJSONConsultarUsuario.php?" +
                 "documento=" + campoID.getText().toString();
 
         //esto hace que permita ingresar los datos con espacios, ejemplo: Didier Jose

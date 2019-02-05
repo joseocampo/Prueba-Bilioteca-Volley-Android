@@ -32,4 +32,7 @@
     <string name="tituloregistrousuario">tituloRegistrousuario</string>
     <string name="agregar_usuario">Agregar Usuario</string>
     <string name="say_hello">Say Hello</string>
+    <string name="activar_gps">Activar GPS</string>
+    <string name="ninguna_direccion">-- ninguna direccion --</string>
+    <string name="no_coordenadas">-- no coordenadas --</string>
 </resources>
