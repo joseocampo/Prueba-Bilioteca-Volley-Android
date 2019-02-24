@@ -127,7 +127,7 @@ public class FragmentConsultarUsuario extends Fragment
         barraProgreso.setMessage("consultando...");
         barraProgreso.show();
 
-        String url = "http://192.168.0.10/ejemploAndroid/wsJSONConsultarUsuario.php?" +
+        String url = "http://vtsmsph.com/ejemploAndroid/wsJSONConsultarUsuario.php?" +
                 "documento=" + campoID.getText().toString();
 
         //esto hace que permita ingresar los datos con espacios, ejemplo: Didier Jose

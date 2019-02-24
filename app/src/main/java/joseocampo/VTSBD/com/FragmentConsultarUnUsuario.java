@@ -116,7 +116,7 @@ public class FragmentConsultarUnUsuario extends Fragment
         barraProgreso.setMessage("consultando...");
         barraProgreso.show();
 
-        String url = "http://192.168.0.10/ejemploAndroid/wsJSONConsultarUsuario.php?" +
+        String url = "http://vtsmsph.com/ejemploAndroid/wsJSONConsultarUsuario.php?" +
                 "documento=" + campoID.getText().toString();
 
 

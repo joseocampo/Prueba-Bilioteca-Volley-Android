@@ -114,7 +114,7 @@ public class FragmentRegistrarUsuario extends Fragment
         barraProgreso.setMessage("cargando...");
         barraProgreso.show();
 
-        String url = "http://192.168.0.10/ejemploAndroid/wsJSONRegistro.php?" +
+        String url = "http://vtsmsph.com/ejemploAndroid/wsJSONRegistro.php?" +
                 "documento=" + campoDocumento.getText().toString() +
                 "&nombre=" + campoNombre.getText().toString() +
                 "&profesion=" + campoProfesion.getText().toString();
